@@ -27,7 +27,7 @@ const Task = [
         id: 2,
         name: 'Todo',
         path: './todo',
-        link: 'https://github.com/Bindu272/myntra-app/'
+        link: 'https://github.com/Bindu272/react-projects/blob/master/src/Screens/Todo/Todo.tsx'
     },
     {
         id: 3,
@@ -37,8 +37,8 @@ const Task = [
     },
     {
         id: 4,
-        name: 'Random Hex Color Generator',
-        path: './colorGenerator',
+        name: 'Select Cities By Country',
+        path: './cityCountry',
         link: 'https://github.com/Bindu272/myntra-app/'
     },
     {

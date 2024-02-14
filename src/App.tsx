@@ -8,6 +8,7 @@ import AccordionNoDivider from './Screens/Accordion/Accordion';
 import Home from './Screens/Home/Home';
 import ColorGenerator from './Screens/ColorGenarator/ColorGenerator';
 import Todo from './Screens/Todo/Todo';
+import CityByCountry from './Screens/CityByCountry/CityByCountry';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path='/accordion' element={<AccordionNoDivider/>}/>
       <Route path='/colorGenerator' element={<ColorGenerator/>}/>
       <Route path='/todo' element={<Todo/>}/>
+      <Route path='/cityCountry' element={<CityByCountry/>}/>
     </Routes>
     </Layout>
     <Footer/>
