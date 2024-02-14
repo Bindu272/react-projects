@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import AccordionNoDivider from './Screens/Accordion/Accordion';
 import Home from './Screens/Home/Home';
 import ColorGenerator from './Screens/ColorGenarator/ColorGenerator';
-
+import Todo from './Screens/Todo/Todo';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
     <Route path='/' element={<Home/>}/>
       <Route path='/accordion' element={<AccordionNoDivider/>}/>
       <Route path='/colorGenerator' element={<ColorGenerator/>}/>
+      <Route path='/todo' element={<Todo/>}/>
     </Routes>
     </Layout>
     <Footer/>

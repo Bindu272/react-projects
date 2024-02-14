@@ -20,6 +20,31 @@ const Task = [
         id: 1,
         name: 'Accordion',
         path: './accordion',
+        link: 'https://github.com/Bindu272/react-projects/blob/master/src/Screens/Accordion/Accordion.tsx'
+
+    },
+    {
+        id: 2,
+        name: 'Todo',
+        path: './todo',
+        link: 'https://github.com/Bindu272/myntra-app/'
+    },
+    {
+        id: 3,
+        name: 'Random Hex Color Generator',
+        path: './colorGenerator',
+        link: 'https://github.com/Bindu272/react-projects/blob/master/src/Screens/ColorGenarator/ColorGenerator.tsx'
+    },
+    {
+        id: 4,
+        name: 'Random Hex Color Generator',
+        path: './colorGenerator',
+        link: 'https://github.com/Bindu272/myntra-app/'
+    },
+    {
+        id: 1,
+        name: 'Accordion',
+        path: './accordion',
         link: 'https://github.com/Bindu272/myntra-app/'
 
     },
@@ -45,9 +70,9 @@ const Task = [
 export default function BioCard() {
     return (
         <>
-         
+        <div style={{display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:'20px', marginTop:'100px', marginBottom:'35px'}}>
             {Task.map((tasks, id) => (
-               
+              
                 <Card
                     key={id}
                     sx={{
@@ -55,6 +80,7 @@ export default function BioCard() {
                         maxWidth: '100%',
                         boxShadow: 'lg',
                     }}
+                    
                 >
                     <CardContent sx={{ alignItems: 'center', textAlign: 'center' }}>
 
@@ -80,8 +106,8 @@ export default function BioCard() {
                     <CardOverflow sx={{ bgcolor: 'background.level1' }}>
                         <CardActions buttonFlex="1">
                             <ButtonGroup variant="outlined" sx={{ bgcolor: 'background.surface' }}>
-                                <Button> <Link to={tasks.path}>Try</Link> </Button>
-                                <Button> <Link to={tasks.link}  target="_blank">Show Code</Link> </Button>
+                            <Button component={Link}  to={tasks.path}> Try</Button>
+                            <Button component={Link} to={tasks.link} target="_blank"> Show Code </Button>
                             </ButtonGroup>
                         </CardActions>
                     </CardOverflow>
@@ -90,8 +116,8 @@ export default function BioCard() {
             ))
 
             }
-         
-            
+      
+      </div> 
         </>
 
     );
