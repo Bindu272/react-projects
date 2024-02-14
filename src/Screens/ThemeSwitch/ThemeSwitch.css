@@ -1,0 +1,32 @@
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%;
+    padding: 85px;
+    display: flex;
+   justify-items: center;
+    justify-content: center;
+  }
+  
+  .dark-theme {
+    background-color: #333333;
+    width: 100%;
+    padding: 85px;
+    color: #ffffff;
+    display: flex;
+    justify-items: center;
+     justify-content: center;
+  }
+ 
+  @keyframes img-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .rotate-image {
+    animation: img-spin infinite 20s linear; 
+  }
+  

@@ -9,6 +9,7 @@ import Home from './Screens/Home/Home';
 import ColorGenerator from './Screens/ColorGenarator/ColorGenerator';
 import Todo from './Screens/Todo/Todo';
 import CityByCountry from './Screens/CityByCountry/CityByCountry';
+import ThemeSwitch from './Screens/ThemeSwitch/ThemeSwitch';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path='/colorGenerator' element={<ColorGenerator/>}/>
       <Route path='/todo' element={<Todo/>}/>
       <Route path='/cityCountry' element={<CityByCountry/>}/>
+      <Route path='/themeSwitch' element={<ThemeSwitch/>}/>
     </Routes>
     </Layout>
     <Footer/>
