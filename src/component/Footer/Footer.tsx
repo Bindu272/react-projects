@@ -1,62 +1,36 @@
 import * as React from 'react';
-import { ColorPaletteProp } from '@mui/joy/styles';
-import AspectRatio from '@mui/joy/AspectRatio';
 import Box from '@mui/joy/Box';
 import IconButton from '@mui/joy/IconButton';
-import Card from '@mui/joy/Card';
-import CardContent from '@mui/joy/CardContent';
 import Divider from '@mui/joy/Divider';
 import Input from '@mui/joy/Input';
 import List from '@mui/joy/List';
 import ListSubheader from '@mui/joy/ListSubheader';
 import ListItem from '@mui/joy/ListItem';
 import ListItemButton from '@mui/joy/ListItemButton';
-import Typography from '@mui/joy/Typography';
 import Sheet from '@mui/joy/Sheet';
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import LinkedInRoundedIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SendIcon from '@mui/icons-material/Send';
-import ColorLensRoundedIcon from '@mui/icons-material/ColorLensRounded';
+import { Link } from 'react-router-dom';
+
 
 export default function ColorInversionFooter() {
-  const [color, setColor] = React.useState<ColorPaletteProp>('neutral');
   return (
     <Sheet
       variant="solid"
-      color={color}
+      color='primary'
       invertedColors
       sx={{
-        ...(color !== 'neutral' && {
-          bgcolor: `${color}.800`,
-        }),
         flexGrow: 1,
-        p: 2,
-        borderRadius: { xs: 0, sm: 'sm' },
+        p:1  
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-        <IconButton
-          variant="soft"
-          size="sm"
-          onClick={() => {
-            const colors: ColorPaletteProp[] = [
-              'primary',
-              'neutral',
-              'danger',
-              'success',
-              'warning',
-            ];
-            const nextColorIndex = colors.indexOf(color) + 1;
-            setColor(colors[nextColorIndex] ?? colors[0]);
-          }}
-        >
-          <ColorLensRoundedIcon fontSize="small" />
+
+        <IconButton variant="plain" component={Link} to='https://www.linkedin.com/in/bindu-rvikumar-patil-1782601a7/' target='_blank'>
+          <LinkedInRoundedIcon />
         </IconButton>
-        <Divider orientation="vertical" />
-        <IconButton variant="plain">
-          <FacebookRoundedIcon />
-        </IconButton>
-        <IconButton variant="plain">
+        <IconButton variant="plain" component={Link} to='https://github.com/Bindu272' target='_blank'>
           <GitHubIcon />
         </IconButton>
         <Input
@@ -77,33 +51,13 @@ export default function ColorInversionFooter() {
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
-          alignItems: { md: 'flex-start' },
-          justifyContent: 'space-between',
+          alignItems: { md: 'center' },
+          justifyContent: 'space-around',
           flexWrap: 'wrap',
           gap: 2,
         }}
       >
-        <Card
-          variant="soft"
-          size="sm"
-          sx={{
-            flexDirection: { xs: 'row', md: 'column' },
-            minWidth: { xs: '100%', md: 'auto' },
-            gap: 1,
-          }}
-        >
-          <AspectRatio
-            ratio="21/9"
-            minHeight={80}
-            sx={{ flexBasis: { xs: 200, md: 'initial' } }}
-          >
-            <img alt="" src="/static/blog/mui-product-comparison/ecosystem.png" />
-          </AspectRatio>
-          <CardContent>
-            <Typography level="body-sm">Intro to the MUI ecosystem</Typography>
-            <Typography level="body-xs">Blog post</Typography>
-          </CardContent>
-        </Card>
+
         <List
           size="sm"
           orientation="horizontal"
@@ -111,30 +65,30 @@ export default function ColorInversionFooter() {
           sx={{ flexGrow: 0, '--ListItem-radius': '8px', '--ListItem-gap': '0px' }}
         >
           <ListItem nested sx={{ width: { xs: '50%', md: 140 } }}>
-            <ListSubheader sx={{ fontWeight: 'xl' }}>Sitemap</ListSubheader>
+            <ListSubheader sx={{ fontWeight: 'xl' }}>Information</ListSubheader>
             <List>
               <ListItem>
-                <ListItemButton>Services</ListItemButton>
+                <ListItemButton component='a' href={`mailto:bindupatil272@gmail.com`}>Contact</ListItemButton>
               </ListItem>
               <ListItem>
-                <ListItemButton>Blog</ListItemButton>
+                <ListItemButton target='_blank' component={Link} to='https://medium.com/@bindupatil272/frameworks-face-off-react-angular-and-vue-js-in-a-battle-royale-37d5afb38f0d'>Blog</ListItemButton>
               </ListItem>
               <ListItem>
-                <ListItemButton>About</ListItemButton>
+                <ListItemButton target='_blank' component={Link} to='https://myntra-app-teal.vercel.app/signInPage'>About</ListItemButton>
               </ListItem>
             </List>
           </ListItem>
           <ListItem nested sx={{ width: { xs: '50%', md: 180 } }}>
-            <ListSubheader sx={{ fontWeight: 'xl' }}>Products</ListSubheader>
-            <List sx={{ '--ListItemDecorator-size': '32px' }}>
-              <ListItem>
-                <ListItemButton>Joy UI</ListItemButton>
+            <ListSubheader sx={{ fontWeight: 'xl' }}>Projects</ListSubheader>
+            <List sx={{ '--ListItemDecorator-size': '32px' }}  >
+              <ListItem >
+                <ListItemButton  target='_blank' component={Link} to='https://myntra-app-teal.vercel.app/signInPage'>Myntra Clone</ListItemButton>
               </ListItem>
-              <ListItem>
-                <ListItemButton>Base UI</ListItemButton>
+              <ListItem >
+                <ListItemButton component={Link} to='https://redux-toolkit-green.vercel.app/' target='_blank'>Redux-Toolkit</ListItemButton>
               </ListItem>
-              <ListItem>
-                <ListItemButton>Material UI</ListItemButton>
+              <ListItem >
+                <ListItemButton component={Link} to='https://github.com/Bindu272' target='_blank'>See More</ListItemButton>
               </ListItem>
             </List>
           </ListItem>

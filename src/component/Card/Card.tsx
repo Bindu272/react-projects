@@ -16,52 +16,40 @@ const Task = [
         id: 1,
         name: 'Accordion',
         path: './accordion',
-        link: 'https://github.com/Bindu272/react-projects/blob/master/src/Screens/Accordion/Accordion.tsx'
+        link: 'https://github.com/Bindu272/react-projects/blob/master/src/Screens/Accordion/Accordion.tsx',
+        description:'A React accordion is a UI component that organizes content into collapsible sections. Users can expand or collapse sections by clicking on headers, providing a streamlined way to navigate through information.'
 
     },
     {
         id: 2,
         name: 'Todo',
         path: './todo',
-        link: 'https://github.com/Bindu272/react-projects/blob/master/src/Screens/Todo/Todo.tsx'
+        link: 'https://github.com/Bindu272/react-projects/blob/master/src/Screens/Todo/Todo.tsx',
+        description:'A todo-list is a simple application or component used to manage tasks or items that need to be completed. Users can typically add, remove, update, and mark tasks as completed within the list.'
     },
     {
         id: 3,
         name: 'Random Hex Color Generator',
         path: './colorGenerator',
-        link: 'https://github.com/Bindu272/react-projects/blob/master/src/Screens/ColorGenarator/ColorGenerator.tsx'
+        link: 'https://github.com/Bindu272/react-projects/blob/master/src/Screens/ColorGenarator/ColorGenerator.tsx',
+        description:'A random hex color generator is a tool or function that generates random hexadecimal color codes. '
     },
     {
         id: 4,
         name: 'Select Cities By Country',
         path: './cityCountry',
-        link: 'https://github.com/Bindu272/react-projects/blob/master/src/Screens/CityByCountry/CityByCountry.tsx'
+        link: 'https://github.com/Bindu272/react-projects/blob/master/src/Screens/CityByCountry/CityByCountry.tsx',
+        description:'To select cities by country, you would typically need a database or some data source containing information about cities and their corresponding countries. '
     },
     {
         id: 5,
         name: 'Theme Switch',
         path: './themeSwitch',
-        link: 'https://github.com/Bindu272/myntra-app/'
+        link: 'https://github.com/Bindu272/react-projects/blob/master/src/Screens/ThemeSwitch/ThemeSwitch.tsx',
+        description:'A theme switcher is a user interface element or functionality that allows users to switch between different themes or visual styles in an application or website.'
 
     },
-    {
-        id: 2,
-        name: 'Star Rating',
-        path: './startRating',
-        link: 'https://github.com/Bindu272/myntra-app/'
-    },
-    {
-        id: 3,
-        name: 'Random Hex Color Generator',
-        path: './colorGenerator',
-        link: 'https://github.com/Bindu272/myntra-app/'
-    },
-    {
-        id: 4,
-        name: 'Random Hex Color Generator',
-        path: './colorGenerator',
-        link: 'https://github.com/Bindu272/myntra-app/'
-    }
+   
 ]
 export default function BioCard() {
     return (
@@ -95,8 +83,7 @@ export default function BioCard() {
                         </Chip>
                         <Typography level="title-lg">{tasks.name}</Typography>
                         <Typography level="body-sm" sx={{ maxWidth: '24ch' }}>
-                            Hello, this is my bio and I am a PRO member of MUI. I am a developer and I
-                            love to code.
+                           {tasks.description}
                         </Typography>
                     </CardContent>
                     <CardOverflow sx={{ bgcolor: 'background.level1' }}>
