@@ -82,7 +82,7 @@ export default function BioCard() {
                             {tasks.id}
                         </Chip>
                         <Typography level="title-lg">{tasks.name}</Typography>
-                        <Typography level="body-sm" sx={{ maxWidth: '24ch' }}>
+                        <Typography level="body-sm" sx={{ maxWidth: '50ch' }}>
                            {tasks.description}
                         </Typography>
                     </CardContent>
