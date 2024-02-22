@@ -59,7 +59,7 @@ export default function AccordionNoDivider() {
   return (
     <div style={{paddingTop:'60px'}}>
     <AccordionGroup disableDivider sx={{ maxWidth: 400 }}>
-    {data.map((datas, index)=>(
+    {data.map((datas, index, )=>(
       <Accordion>
        
           <>
