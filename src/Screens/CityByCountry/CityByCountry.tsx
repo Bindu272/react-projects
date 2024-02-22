@@ -112,9 +112,10 @@ const CityByCountry = () => {
                     value={selectedCountry}
                     label="Country"
                     onChange={handleSelectedCountry}
+                    
                 >
                     {countries.map((country) => (
-                        <MenuItem value={country.name}>{country.name}</MenuItem>
+                        <MenuItem value={country.name} key={country.name}>{country.name}</MenuItem>
                     ))}
                 </Select>
             </FormControl>
