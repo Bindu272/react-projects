@@ -1,25 +1,26 @@
-import React, { useState } from 'react'
-import './colorGenarator.css'
-const ColorGenerator = () => {
-    const[color, setColor]=useState('#000')
-    const getRgb=()=>Math.floor(Math.random()*256)
-    const rgbToHex=(r: any, g: any, b: any)=>'#' + [r, g, b].map(x=>{
-        const hex=x.toString(16)
-        return hex.length===1?'0'+hex:hex
-    }).join('')
-    const handleGenerate=()=>{
-        const color={
-            r:getRgb(),
-            g:getRgb(),
-            b:getRgb()
-        }
-        setColor(rgbToHex(color.r,color.g,color.b))
-    }
-  return (
-    <div style={{background:color}} className='colorContainer'>
-      <button style={{color:color}} onClick={handleGenerate} className='buttonColorGenerator'>{color}</button>
-    </div>
-  )
-}
+import React, { useState } from 'react';
+import './colorGenarator.css';
+import { getRgb, rgbToHex } from './ColorUtils';
 
-export default ColorGenerator
+const ColorGenerator = () => {
+  const [color, setColor] = useState('#000');
+
+  const handleGenerate = () => {
+    const newColor = {
+      r: getRgb(),
+      g: getRgb(),
+      b: getRgb(),
+    };
+    setColor(rgbToHex(newColor.r, newColor.g, newColor.b));
+  };
+
+  return (
+    <div style={{ background: color }} className="colorContainer">
+      <button style={{ color: color }} onClick={handleGenerate} className="buttonColorGenerator">
+        {color}
+      </button>
+    </div>
+  );
+};
+
+export default ColorGenerator;
